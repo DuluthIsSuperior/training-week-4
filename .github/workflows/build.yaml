@@ -9,6 +9,10 @@ jobs:
   package: 
   deploy: 
 
+on:
+  push:
+    - master
+
 # person:
 #   firstName: 'string' # string
 #   lastName: 100 # number
