@@ -1,3 +1,5 @@
+# https://docs.github.com/en/actions/reference/workflow-syntax-for-github-actions
+
 jobs:
   build:
     image: ubuntu-20.04
@@ -9,9 +11,16 @@ jobs:
   package: 
   deploy: 
 
-on:
-  push:
-    - master
+name: cibuild
+
+on: push
+
+# if we don't care about branches, we can just use on: push
+# if we care about the branch:
+# on:
+#   push:
+#     branches:
+#       - master
 
 # person:
 #   firstName: 'string' # string
