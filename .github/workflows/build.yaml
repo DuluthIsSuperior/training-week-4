@@ -6,10 +6,10 @@ jobs:
     steps:
       - uses: actions/checkout
       - run: dotnet build
-  test: 
-  analyze: 
-  package: 
-  deploy: 
+  # test: 
+  # analyze: 
+  # package: 
+  # deploy: 
 
 name: cibuild
 
