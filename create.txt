@@ -1,7 +1,6 @@
 dotnet new sln -n DevopsCI
 dotnet new gitignore
 dotnet new mvc -n DevopsCI.Client
-dotnet sln add **/*.csproj
 
 git init
 git add .
@@ -12,3 +11,13 @@ git push -u origin master -- only for initial commit, otherwise git push
 
 mkdir .github .github/workflows
 touch .github/workflows/build.yaml
+
+dotnet new xunit -n DevopsCI.Testing
+dotnet add DevopsCI.Testing/DevopsCI.Testing.csproj reference DevopsCI.Client/DevopsCI.Client.csproj
+rm DevopsCI.Testing/UnitTest1.cs
+mkdir DevopsCI.Testing/Tests
+touch DevopsCI.Testing/Tests/HomeTest.cs
+
+dotnet sln add **/*.csproj
+
+dotnet add DevopsCI.Testing/DevopsCI.Testing.csproj package Microsoft.AspNetCore.Mvc
