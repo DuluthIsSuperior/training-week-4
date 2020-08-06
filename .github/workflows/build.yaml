@@ -1,0 +1,20 @@
+jobs:
+  build:
+    image: ubuntu-20.04
+    steps:
+      - uses: actions/checkout
+      - run: dotnet build
+  test: 
+  analyze: 
+  package: 
+  deploy: 
+
+# person:
+#   firstName: 'string' # string
+#   lastName: 100 # number
+#   middleName: true # boolean
+#   alias:  # collection
+#     - 'dotnet'  # dash indicates part of a collection
+#     - 'lead'
+#     - subAlias:
+    

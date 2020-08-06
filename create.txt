@@ -2,3 +2,13 @@ dotnet new sln -n DevopsCI
 dotnet new gitignore
 dotnet new mvc -n DevopsCI.Client
 dotnet sln add **/*.csproj
+
+git init
+git add .
+git commit -m 'initial commit'
+
+git remote add origin git@github.com:Pyrodron/training-week-4.git
+git push -u origin master -- only for initial commit, otherwise git push
+
+mkdir .github .github/workflows
+touch .github/workflows/build.yaml
