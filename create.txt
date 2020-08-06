@@ -21,3 +21,5 @@ touch DevopsCI.Testing/Tests/HomeTest.cs
 dotnet sln add **/*.csproj
 
 dotnet add DevopsCI.Testing/DevopsCI.Testing.csproj package Microsoft.AspNetCore.Mvc
+dotnet add DevopsCI.Testing/DevopsCI.Testing.csproj package Coverlet.msbuild
+dotnet test -p:CollectCoverage=true -- analyze how much of the code is covered by testing
