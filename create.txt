@@ -1,0 +1,4 @@
+dotnet new sln -n DevopsCI
+dotnet new gitignore
+dotnet new mvc -n DevopsCI.Client
+dotnet sln add **/*.csproj
