@@ -31,7 +31,7 @@ namespace DevopsCI.Client
         {
             if (env.IsDevelopment())
             {
-                app.UseDeveloperExceptionPage();
+                app.UseDeveloperExceptionPage();  // in production, you will want to remove this
             }
             else
             {
