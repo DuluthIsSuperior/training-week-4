@@ -23,3 +23,5 @@ dotnet sln add **/*.csproj
 dotnet add DevopsCI.Testing/DevopsCI.Testing.csproj package Microsoft.AspNetCore.Mvc
 dotnet add DevopsCI.Testing/DevopsCI.Testing.csproj package Coverlet.msbuild
 dotnet test -p:CollectCoverage=true -- analyze how much of the code is covered by testing
+
+git checkout -b branch-1
